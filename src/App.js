@@ -3,6 +3,10 @@ import axios from "axios";
 
 import React, { useEffect, useState } from "react";
 
+import Header from "./components/Header/Header";
+
+import { Container } from "@material-ui/core";
+
 const App = () => {
   const [word, setWord] = useState("");
   const [meanings, setMeanings] = useState([]);
@@ -23,7 +27,16 @@ const App = () => {
     dictionaryApi();
   }, []);
 
-  return <div></div>;
+  return (
+    <div style={{ height: "100vh", background: "#282c34", color: "#fff" }}>
+      <Container
+        maxWidth="md"
+        style={{ display: "flex", flexDirection: "column", height: "100vh" }}
+      >
+        <Header />
+      </Container>
+    </div>
+  );
 };
 
 export default App;
