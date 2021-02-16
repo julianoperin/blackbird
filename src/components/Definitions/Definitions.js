@@ -1,9 +1,8 @@
 import React from "react";
 import "./Definitions.css";
 
-// import { LightTheme } from "@material-ui/core";
 
-const Definitions = ({ category, word, meanings }) => {
+const Definitions = ({ category, word, meanings, LightTheme }) => {
   return (
     <div className="meanings">
       {/* audio---------------------------- */}
