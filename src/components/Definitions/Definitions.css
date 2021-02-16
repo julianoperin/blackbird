@@ -1,10 +1,25 @@
 .meanings {
   display: flex;
   flex-direction: column;
-  background: pink;
+  background: white;
+  color: black;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  height: 70vh;
+  border: 2px solid blue;
+  padding: 10px 20px;
+  overflow-x: hidden;
 }
 
 .subTitle {
   font-size: 1.2rem;
   font-family: "Raleway", sans-serif;
+}
+
+@media (max-width: 900px) {
+  .meanings {
+    height: 60vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }

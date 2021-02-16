@@ -1,7 +1,7 @@
 import React from "react";
 import "./Definitions.css";
 
-import { LightTheme } from "@material-ui/core";
+// import { LightTheme } from "@material-ui/core";
 
 const Definitions = ({ category, word, meanings }) => {
   return (
@@ -14,10 +14,12 @@ const Definitions = ({ category, word, meanings }) => {
             item.definitions.map((def) => (
               <div
                 className="singleMean"
-                style={{
-                  backgroundColor: LightTheme ? "#3b5360" : "white",
-                  color: LightTheme ? "white" : "black",
-                }}
+                style={
+                  {
+                    //   backgroundColor: LightTheme ? "#3b5360" : "white",
+                    //   color: LightTheme ? "white" : "black",
+                  }
+                }
               >
                 <b>{def.definition}</b>
                 <hr style={{ backgroundColor: "black", width: "100%" }} />
