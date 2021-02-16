@@ -8,6 +8,7 @@ import Header from "./components/Header/Header";
 import { Container } from "@material-ui/core";
 
 const App = () => {
+  const [category, setCategory] = useState("en");
   const [word, setWord] = useState("");
   const [meanings, setMeanings] = useState([]);
 
@@ -33,7 +34,7 @@ const App = () => {
         maxWidth="md"
         style={{ display: "flex", flexDirection: "column", height: "100vh" }}
       >
-        <Header />
+        <Header category={category} setCategory={setCategory} />
       </Container>
     </div>
   );
