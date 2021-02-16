@@ -1,0 +1,10 @@
+.meanings {
+  display: flex;
+  flex-direction: column;
+  background: pink;
+}
+
+.subTitle {
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;
+}
