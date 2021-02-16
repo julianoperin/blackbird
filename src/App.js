@@ -34,7 +34,12 @@ const App = () => {
         maxWidth="md"
         style={{ display: "flex", flexDirection: "column", height: "100vh" }}
       >
-        <Header category={category} setCategory={setCategory} />
+        <Header
+          word={word}
+          setWord={setWord}
+          category={category}
+          setCategory={setCategory}
+        />
       </Container>
     </div>
   );

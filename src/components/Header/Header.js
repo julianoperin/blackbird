@@ -10,7 +10,7 @@ import {
   MenuItem,
 } from "@material-ui/core";
 
-const Header = ({ category, setCategory }) => {
+const Header = ({ category, setCategory, word, setWord }) => {
   const darkTheme = createMuiTheme({
     palette: {
       primary: {
@@ -20,21 +20,30 @@ const Header = ({ category, setCategory }) => {
     },
   });
 
-  console.log("test:", category, setCategory);
+  const handleChange = (language) => {
+    setCategory(language);
+    setWord("");
+  };
 
   return (
     <div className="header">
       <span className="title">Dictionary</span>
       <div className="inputs">
         <ThemeProvider theme={darkTheme}>
-          <TextField id="standard-basic" label="Standard" />
           <TextField
+            className="search"
+            id="standard-basic"
+            label="Search Word"
+            value={word}
+            onChange={(e) => setWord(e.target.value)}
+          />
+          <TextField
+            className="select"
             id="standard-select-currency"
             select
             label="Select"
-            helperText="Please select your language"
             value={category}
-            onChange={(e) => setCategory(e.target.value)}
+            onChange={(e) => handleChange(e.target.value)}
           >
             {categories.map((item) => (
               <MenuItem key={item.label} value={item.label}>
